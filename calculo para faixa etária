@@ -1,0 +1,24 @@
+// Função para calcular a faixa etária
+function verificarFaixaEtaria(anoNascimento) {
+    const anoAtual = new Date().getFullYear();
+    const idade = anoAtual - anoNascimento;
+
+    if (idade < 0) {
+        return "Ano de nascimento inválido.";
+    } else if (idade <= 12) {
+        return "Criança";
+    } else if (idade <= 18) {
+        return "Jovem";
+    } else if (idade <= 59) {
+        return "Adulto";
+    } else {
+        return "Idoso";
+    }
+}
+
+// Exemplo de uso
+const anoNascimento = prompt("Digite o seu ano de nascimento:");
+const faixaEtaria = verificarFaixaEtaria(parseInt(anoNascimento));
+
+console.log(`Sua faixa etária é: ${faixaEtaria}`);
+alert(`Sua faixa etária é: ${faixaEtaria}`);
