@@ -1,4 +1,5 @@
-// Função para calcular a faixa etária
+Função para calcular a faixa etária:
+
 function verificarFaixaEtaria(anoNascimento) {
     const anoAtual = new Date().getFullYear();
     const idade = anoAtual - anoNascimento;
@@ -22,3 +23,36 @@ const faixaEtaria = verificarFaixaEtaria(parseInt(anoNascimento));
 
 console.log(`Sua faixa etária é: ${faixaEtaria}`);
 alert(`Sua faixa etária é: ${faixaEtaria}`);
+
+
+Estação do ano com base no mês informado:
+
+// Função para determinar a estação do ano
+function determinarEstacao(mes) {
+    mes = mes.toLowerCase(); // Converte o mês para minúsculas para evitar problemas com maiúsculas
+
+    switch(mes) {
+        case 'dezembro':
+        case 'janeiro':
+        case 'fevereiro':
+            return "Verão";
+        case 'março':
+        case 'abril':
+        case 'maio':
+            return "Outono";
+        case 'junho':
+        case 'julho':
+        case 'agosto':
+            return "Inverno";
+        case 'setembro':
+        case 'outubro':
+        case 'novembro':
+            return "Primavera";
+        default:
+            return "Mês inválido. Por favor, insira um mês válido.";
+    }
+}
+
+
+
+
